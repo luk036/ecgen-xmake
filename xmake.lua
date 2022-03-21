@@ -1,6 +1,5 @@
 add_rules("mode.debug", "mode.release", "mode.coverage")
 add_requires("conan::fmt/8.1.1", {alias = "fmt"})
-add_requires("conan::gsl/2.7", {alias = "gsl"})
 add_requires("conan::doctest/2.4.8", {alias = "doctest"})
 add_requires("conan::andreasbuhr-cppcoro/cci.20210113", {alias = "cppcoro"})
 
@@ -16,7 +15,6 @@ target("test")
     add_includedirs("include", {public = true})
     add_files("tests/*.cpp")
     add_packages("fmt")
-    add_packages("gsl")
     add_packages("doctest")
     add_packages("cppcoro")
 
