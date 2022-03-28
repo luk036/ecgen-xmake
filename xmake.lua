@@ -2,10 +2,10 @@ set_languages("c++20")
 
 add_rules("mode.debug", "mode.release", "mode.coverage")
 add_requires("conan::fmt/8.1.1", {alias = "fmt"})
-add_requires("conan::doctest/2.4.8", {alias = "doctest"})
+add_requires("conan::doctest/2.4.5", {alias = "doctest"})
 add_requires("conan::andreasbuhr-cppcoro/cci.20210113", {alias = "cppcoro"})
 
-target("ECGen")
+target("ecgen")
     set_kind("static")
     add_includedirs("include", {public = true})
     add_files("src/*.cpp")
@@ -13,12 +13,10 @@ target("ECGen")
 
 target("test")
     set_kind("binary")
-    add_deps("ECGen")
+    add_deps("ecgen")
     add_includedirs("include", {public = true})
     add_files("tests/*.cpp")
-    add_packages("fmt")
-    add_packages("doctest")
-    add_packages("cppcoro")
+    add_packages("fmt", "doctest", "cppcoro")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
