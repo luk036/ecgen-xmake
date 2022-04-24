@@ -2,8 +2,8 @@
 
 // #include <algorithm>                        // for fill_n
 #include <cppcoro/recursive_generator.hpp>  // for recursive_generator
-#include <utility>                          // for pair
 #include <type_traits>                      // for integral_constant
+#include <utility>                          // for pair
 
 namespace ecgen {
 
