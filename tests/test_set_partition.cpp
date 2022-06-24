@@ -7,5 +7,5 @@ TEST_CASE("set partition") {
     for ([[maybe_unused]] auto i : ecgen::set_partition_gen(5, 3)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Stirling2nd<5, 3>());
+    CHECK_EQ(cnt, ecgen::Stirling2nd<5, 3>());
 }

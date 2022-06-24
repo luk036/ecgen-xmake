@@ -9,7 +9,7 @@ TEST_CASE("Generate all permutations by SJT_gen (odd)") {
     for ([[maybe_unused]] auto i : ecgen::SJT_gen(5)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Factorial<5>());
+    CHECK_EQ(cnt, ecgen::Factorial<5>());
 }
 
 TEST_CASE("Generate all permutations by SJT_gen (even)") {
@@ -17,7 +17,7 @@ TEST_CASE("Generate all permutations by SJT_gen (even)") {
     for ([[maybe_unused]] auto i : ecgen::SJT_gen(6)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Factorial<6>());
+    CHECK_EQ(cnt, ecgen::Factorial<6>());
 }
 
 TEST_CASE("Generate all permutations by Ehr algorithm (odd)") {
@@ -25,7 +25,7 @@ TEST_CASE("Generate all permutations by Ehr algorithm (odd)") {
     for ([[maybe_unused]] auto i : ecgen::Ehr_gen(5)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Factorial<5>());
+    CHECK_EQ(cnt, ecgen::Factorial<5>());
 }
 
 TEST_CASE("Generate all permutations by Ehr algorithm (even)") {
@@ -33,7 +33,7 @@ TEST_CASE("Generate all permutations by Ehr algorithm (even)") {
     for ([[maybe_unused]] auto i : ecgen::Ehr_gen(6)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Factorial<6>());
+    CHECK_EQ(cnt, ecgen::Factorial<6>());
 }
 
 TEST_CASE("Generate all permutations by SJT (odd)") {
@@ -42,7 +42,7 @@ TEST_CASE("Generate all permutations by SJT (odd)") {
     for ([[maybe_unused]] auto& l : ecgen::SJT(L)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Factorial<5>());
+    CHECK_EQ(cnt, ecgen::Factorial<5>());
 }
 
 TEST_CASE("Generate all permutations by SJT (even)") {
@@ -51,7 +51,7 @@ TEST_CASE("Generate all permutations by SJT (even)") {
     for ([[maybe_unused]] auto& s : ecgen::SJT(S)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Factorial<6>());
+    CHECK_EQ(cnt, ecgen::Factorial<6>());
 }
 
 TEST_CASE("Generate all permutations by Ehr (odd)") {
@@ -60,7 +60,7 @@ TEST_CASE("Generate all permutations by Ehr (odd)") {
     for ([[maybe_unused]] auto& l : ecgen::Ehr(L)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Factorial<5>());
+    CHECK_EQ(cnt, ecgen::Factorial<5>());
 }
 
 TEST_CASE("Generate all permutations by Ehr (even)") {
@@ -69,5 +69,5 @@ TEST_CASE("Generate all permutations by Ehr (even)") {
     for ([[maybe_unused]] auto& s : ecgen::Ehr(S)) {
         ++cnt;
     }
-    CHECK(cnt == ecgen::Factorial<6>());
+    CHECK_EQ(cnt, ecgen::Factorial<6>());
 }
