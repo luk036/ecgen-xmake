@@ -40,7 +40,6 @@
 #include <utility>
 
 namespace ecgen {
-
     /**
      * @brief Stirling number of second kind.
      *

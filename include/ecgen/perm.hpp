@@ -4,7 +4,6 @@
 #include <type_traits>  // for integral_constant
 
 namespace ecgen {
-
     /**
      * @brief SJT
      *
@@ -69,5 +68,4 @@ namespace ecgen {
             co_yield perm;
         }
     }
-
 }  // namespace ecgen

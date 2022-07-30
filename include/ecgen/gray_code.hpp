@@ -3,7 +3,6 @@
 #include <cppcoro/recursive_generator.hpp>
 
 namespace ecgen {
-
     /**
      * @brief Generate reflexed Gray code
      *
