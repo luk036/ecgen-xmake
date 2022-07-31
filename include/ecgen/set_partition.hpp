@@ -66,4 +66,27 @@ namespace ecgen {
     extern auto set_partition_gen(size_t n, size_t k)
         -> cppcoro::recursive_generator<std::pair<size_t, size_t>>;
 
+    /**
+     * @brief Stirling number of second kind (k = 2).
+     *
+     * @tparam N
+     * @return constexpr auto
+     */
+    template <size_t N> constexpr auto Stirling2nd2() {
+        if constexpr (N <= 2) {
+            return std::integral_constant<size_t, 1>{};
+        } else {
+            return std::integral_constant<size_t, 1 + 2 * Stirling2nd2<N - 1>()>{};
+        }
+    }
+
+    /**
+     * @brief Set the bipart gen object
+     *
+     * @param n
+     * @param k
+     * @return cppcoro::recursive_generator<size_t>
+     */
+    extern auto set_bipart_gen(size_t n)
+        -> cppcoro::recursive_generator<size_t>;
 }  // namespace ecgen

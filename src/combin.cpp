@@ -40,7 +40,7 @@ namespace ecgen {
      * @param k
      * @return recursive_generator<ret_t>
      */
-    auto EMK_neg(size_t n, size_t k) -> recursive_generator<ret_t> {
+    inline auto EMK_neg(size_t n, size_t k) -> recursive_generator<ret_t> {
         if (n <= k || k == 0) {
             co_return;
         }
