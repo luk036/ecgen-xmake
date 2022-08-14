@@ -10,9 +10,7 @@ namespace ecgen {
     using namespace cppcoro;
     using ret_t = size_t;
 
-    inline auto Move(size_t x) -> recursive_generator<ret_t> {
-        co_yield x;
-    }
+    inline auto Move(size_t x) -> recursive_generator<ret_t> { co_yield x; }
 
     // The lists S(n,k,0) and S(n,k,1) satisfy the following properties.
     // 1. Successive RG sequences differ in exactly one position.
@@ -31,9 +29,7 @@ namespace ecgen {
      * @param n
      * @return recursive_generator<ret_t>
      */
-    auto set_bipart_gen(size_t n) -> recursive_generator<ret_t> {
-        co_yield GEN0_even(n);
-    }
+    auto set_bipart_gen(size_t n) -> recursive_generator<ret_t> { co_yield GEN0_even(n); }
 
     /**
      * @brief S(n,k,0) even k

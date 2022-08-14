@@ -87,6 +87,5 @@ namespace ecgen {
      * @param k
      * @return cppcoro::recursive_generator<size_t>
      */
-    extern auto set_bipart_gen(size_t n)
-        -> cppcoro::recursive_generator<size_t>;
+    extern auto set_bipart_gen(size_t n) -> cppcoro::recursive_generator<size_t>;
 }  // namespace ecgen

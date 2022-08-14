@@ -31,11 +31,11 @@ namespace ecgen {
      * @brief Generate all combinations in reverse order by homogeneous
      * revolving-door
      *
-     * @tparam Container 
-     * @param n 
-     * @param k 
-     * @param lst 
-     * @return cppcoro::generator<Container&> 
+     * @tparam Container
+     * @param n
+     * @param k
+     * @param lst
+     * @return cppcoro::generator<Container&>
      */
     template <typename Container> auto EMK(size_t n, size_t k, Container& lst)
         -> cppcoro::generator<Container&> {
@@ -53,9 +53,9 @@ namespace ecgen {
     /**
      * @brief The number of combinations
      *
-     * @tparam N 
-     * @tparam K 
-     * @return constexpr auto 
+     * @tparam N
+     * @tparam K
+     * @return constexpr auto
      */
     template <size_t N, size_t K> constexpr auto Combination() {
         if constexpr (K >= N || K == 0) {
