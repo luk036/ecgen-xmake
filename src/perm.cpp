@@ -43,7 +43,7 @@ namespace ecgen {
         std::iota(b.begin(), b.end(), 0U);  // 0, 1, ... n-1
 
         while (true) {
-            size_t k = 1;
+            auto k = 1U;
             do {
                 if (c[k] == k) {
                     c[k] = 0;

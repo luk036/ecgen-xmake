@@ -23,13 +23,13 @@ namespace ecgen {
             for (size_t i = 0; i != n - 1; ++i) {
                 co_yield std::make_pair(i, i + 1);
             }
-        } else {
-            co_yield EMK_gen(n - 1, k);
-            co_yield std::make_pair(n - 2, n - 1);
-            co_yield EMK_neg(n - 2, k - 1);
-            co_yield std::make_pair(k - 2, n - 2);
-            co_yield EMK_gen(n - 2, k - 2);
+            co_return;
         }
+        co_yield EMK_gen(n - 1, k);
+        co_yield std::make_pair(n - 2, n - 1);
+        co_yield EMK_neg(n - 2, k - 1);
+        co_yield std::make_pair(k - 2, n - 2);
+        co_yield EMK_gen(n - 2, k - 2);
     }
 
     /**
@@ -48,13 +48,13 @@ namespace ecgen {
             for (size_t i = n - 1; i != 0; --i) {
                 co_yield std::make_pair(i, i - 1);
             }
-        } else {
-            co_yield EMK_neg(n - 2, k - 2);
-            co_yield std::make_pair(n - 2, k - 2);
-            co_yield EMK_gen(n - 2, k - 1);
-            co_yield std::make_pair(n - 1, n - 2);
-            co_yield EMK_neg(n - 1, k);
+            co_return;
         }
+        co_yield EMK_neg(n - 2, k - 2);
+        co_yield std::make_pair(n - 2, k - 2);
+        co_yield EMK_gen(n - 2, k - 1);
+        co_yield std::make_pair(n - 1, n - 2);
+        co_yield EMK_neg(n - 1, k);
     }
 
 }  // namespace ecgen
