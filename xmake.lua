@@ -11,6 +11,7 @@ target("Ecgen")
     add_includedirs("include", {public = true})
     add_files("src/*.cpp")
     add_packages("cppcoro")
+    set_warnings("all", "error")
 
 target("test_ecgen")
     set_kind("binary")
@@ -18,6 +19,7 @@ target("test_ecgen")
     add_includedirs("include", {public = true})
     add_files("tests/*.cpp")
     add_packages("doctest", "cppcoro")
+    set_warnings("all", "error")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
