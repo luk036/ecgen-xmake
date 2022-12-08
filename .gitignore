@@ -2,7 +2,7 @@
 .xmake/
 build/
 .cache/
-compile_command.json
+compile_commands.json
 
 # MacOS Cache
 .DS_Store
