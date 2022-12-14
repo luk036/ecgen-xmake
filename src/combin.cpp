@@ -11,8 +11,8 @@ namespace ecgen {
     /**
      * @brief Generate all combinations by homogeneous revolving-door
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     auto EMK_gen(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -36,8 +36,8 @@ namespace ecgen {
      * @brief Generate all combinations in reverse order by homogeneous
      * revolving-door
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto EMK_neg(size_t n, size_t k) -> recursive_generator<ret_t> {

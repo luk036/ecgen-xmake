@@ -26,7 +26,7 @@ namespace ecgen {
     /**
      * @brief Set the bipart gen object
      *
-     * @param n
+     * @param[in] n
      * @return recursive_generator<ret_t>
      */
     auto set_bipart_gen(size_t n) -> recursive_generator<ret_t> { co_yield GEN0_even(n); }
@@ -34,8 +34,8 @@ namespace ecgen {
     /**
      * @brief S(n,k,0) even k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto GEN0_even(size_t n) -> recursive_generator<ret_t> {
@@ -51,8 +51,8 @@ namespace ecgen {
     /**
      * @brief S(n, k, 1) even k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto GEN1_even(size_t n) -> recursive_generator<ret_t> {
@@ -68,8 +68,8 @@ namespace ecgen {
     /**
      * @brief S'(n, k, 1) even k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto NEG1_even(size_t n) -> recursive_generator<ret_t> {

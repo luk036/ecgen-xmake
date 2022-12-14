@@ -7,7 +7,7 @@ namespace ecgen {
     /**
      * @brief SJT
      *
-     * @param n
+     * @param[in] n
      * @return cppcoro::generator<size_t>
      */
     extern auto SJT_gen(size_t n) -> cppcoro::generator<size_t>;
@@ -15,7 +15,7 @@ namespace ecgen {
     /**
      * @brief Ehr
      *
-     * @param n
+     * @param[in] n
      * @return cppcoro::generator<size_t>
      */
     extern auto Ehr_gen(size_t n) -> cppcoro::generator<size_t>;
@@ -38,7 +38,7 @@ namespace ecgen {
      * @brief SJT permutation by adjacent transposition (less efficiency)
      *
      * @tparam Container
-     * @param perm
+     * @param[in] perm
      * @return cppcoro::generator<Container&>
      */
     template <typename Container> auto SJT(Container& perm) -> cppcoro::generator<Container&> {
@@ -55,7 +55,7 @@ namespace ecgen {
      * @brief Ehr permutation by star transposition (less efficiency)
      *
      * @tparam Container
-     * @param perm
+     * @param[in] perm
      * @return cppcoro::generator<Container&>
      */
     template <typename Container> auto Ehr(Container& perm) -> cppcoro::generator<Container&> {

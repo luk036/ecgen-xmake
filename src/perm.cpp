@@ -7,7 +7,7 @@ namespace ecgen {
     /**
      * @brief Generate all permutations by adjacent transposition
      *
-     * @param n
+     * @param[in] n
      * @return cppcoro::generator<size_t>
      */
     auto SJT_gen(size_t n) -> cppcoro::generator<size_t> {
@@ -34,7 +34,7 @@ namespace ecgen {
     /**
      * @brief Generate all permutations by star transposition
      *
-     * @param n
+     * @param[in] n
      * @return cppcoro::generator<size_t>
      */
     auto Ehr_gen(size_t n) -> cppcoro::generator<size_t> {

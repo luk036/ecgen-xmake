@@ -9,7 +9,7 @@ namespace ecgen {
     /**
      * @brief Binary Reflexed Gray Code Generator
      *
-     * @param n
+     * @param[in] n
      * @return recursive_generator<size_t>
      */
     auto BRGC_gen(size_t n) -> recursive_generator<size_t> {

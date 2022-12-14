@@ -6,7 +6,7 @@ namespace ecgen {
     /**
      * @brief Generate reflexed Gray code
      *
-     * @param n
+     * @param[in] n
      * @return cppcoro::recursive_generator<size_t>
      */
     extern auto BRGC_gen(size_t n) -> cppcoro::recursive_generator<size_t>;
@@ -15,7 +15,7 @@ namespace ecgen {
      * @brief Binary Reflexed Gray Code (less efficiency)
      *
      * @tparam Container
-     * @param n
+     * @param[in] n
      * @return cppcoro::generator<Container&>
      */
     template <typename Container> auto BRGC(size_t n) -> cppcoro::generator<Container&> {

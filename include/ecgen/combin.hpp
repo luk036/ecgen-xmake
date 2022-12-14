@@ -10,8 +10,8 @@ namespace ecgen {
     /**
      * @brief EMK (GEN)
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return cppcoro::recursive_generator<std::pair<size_t, size_t>>
      */
     extern auto EMK_gen(size_t n, size_t k)
@@ -20,8 +20,8 @@ namespace ecgen {
     /**
      * @brief EMK (NEG)
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return cppcoro::recursive_generator<std::pair<size_t, size_t>>
      */
     extern auto EMK_neg(size_t n, size_t k)
@@ -32,9 +32,9 @@ namespace ecgen {
      * revolving-door
      *
      * @tparam Container
-     * @param n
-     * @param k
-     * @param lst
+     * @param[in] n
+     * @param[in] k
+     * @param[in] lst
      * @return cppcoro::generator<Container&>
      */
     template <typename Container> auto EMK(size_t n, size_t k, Container& lst)

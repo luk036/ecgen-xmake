@@ -33,8 +33,8 @@ namespace ecgen {
     /**
      * @brief Set the partition gen object
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     auto set_partition_gen(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -47,8 +47,8 @@ namespace ecgen {
     /**
      * @brief S(n,k,0) even k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto GEN0_even(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -71,8 +71,8 @@ namespace ecgen {
     /**
      * @brief S'(n, k, 0) even k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto NEG0_even(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -95,8 +95,8 @@ namespace ecgen {
     /**
      * @brief S(n, k, 1) even k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto GEN1_even(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -119,8 +119,8 @@ namespace ecgen {
     /**
      * @brief S'(n, k, 1) even k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto NEG1_even(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -143,8 +143,8 @@ namespace ecgen {
     /**
      * @brief S(n, k, 0) odd k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto GEN0_odd(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -165,8 +165,8 @@ namespace ecgen {
     /**
      * @brief S'(n, k, 0) odd k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto NEG0_odd(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -187,8 +187,8 @@ namespace ecgen {
     /**
      * @brief S(n, k, 1) odd k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto GEN1_odd(size_t n, size_t k) -> recursive_generator<ret_t> {
@@ -209,8 +209,8 @@ namespace ecgen {
     /**
      * @brief S'(n, k, 1) odd k
      *
-     * @param n
-     * @param k
+     * @param[in] n
+     * @param[in] k
      * @return recursive_generator<ret_t>
      */
     inline auto NEG1_odd(size_t n, size_t k) -> recursive_generator<ret_t> {
