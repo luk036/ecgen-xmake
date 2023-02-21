@@ -6,6 +6,10 @@ add_requires("doctest", {alias = "doctest"})
 add_requires("conan::andreasbuhr-cppcoro/cci.20210113", {alias = "cppcoro"})
 -- add_requires("cppcoro", { configs = { shared = true }, alias = "cppcoro"})
 
+if is_mode("coverage") then
+    add_cxflags("-ftest-coverage", "-fprofile-arcs", {force = true})
+end
+
 target("Ecgen")
     set_kind("static")
     add_includedirs("include", {public = true})
